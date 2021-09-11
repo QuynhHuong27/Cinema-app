@@ -1,0 +1,35 @@
+<div class="container-login">
+  <div class="wrap-login">
+    <%= form_for resource, as: resource_name, url: session_path(resource_name),
+      html: {class:"login-form"} do |f| %>
+      <span class="login-title m-b-37">Sign In</span>
+      <div class="group-input">
+        <%= f.email_field :email, autofocus: true,
+        class: "input-authen m-b-20", autocomplete: "email" %>
+        <span class="focus-input"></span>
+      </div>
+
+      <div class="group-input">
+        <%= f.password_field :password, class: "input-authen m-b-25", autocomplete: "current-password" %>
+        <span class="focus-input" m-b-25></span>
+      </div>
+
+      <div class="login-request">
+        <%= f.submit "Log in", class: "btn-login" %>
+      </div>
+
+      <div class="text-content">
+        <span>Or login with</span>
+      </div>
+
+      <div class="flex-omiauth">
+        <%= link_to "#", class: "social-item facebook" do %>
+          <img src="https://img.icons8.com/fluency/48/000000/facebook.png"/>
+        <% end %>
+        <%= link_to "#", class: "social-item google" do %>
+        <img src="https://img.icons8.com/fluency/48/000000/google-logo.png"/>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
