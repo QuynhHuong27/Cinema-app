@@ -1,0 +1,124 @@
+.container-login {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  background-image: image-url("background.jpg");
+  .wrap-login {
+    width: 390px;
+    background: #f1f1f1cc;
+    border-radius: 10px;
+    overflow: hidden;
+    .login-form {
+      width: 100%;
+      .login-title {
+        display: block;
+        font-size: 30px;
+        color: #4b2354;
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .m-b-37 {
+        margin-bottom: 37px;
+      }
+
+      .group-input {
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        input {
+          outline: none;
+          border: none;
+        }
+
+        .input-authen {
+          font-size: 16px;
+          color: #4b2354;
+          line-height: 1.2;
+          display: block;
+          width: 100%;
+          height: 62px;
+          background: 0 0;
+          padding: 0 20px 0 23px;
+          border-radius: 30px;
+        }
+
+        .m-b-20 {
+          margin-bottom: 20px;
+        }
+
+        .m-b-25 {
+          margin-bottom: 25px;
+        }
+
+        .focus-input {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+          border-radius: 20px;
+          transition: all .4s;
+        }
+
+      }
+
+      .login-request {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .btn-login {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 20px;
+          min-width: 160px;
+          height: 50px;
+          background-color: #ffffff;
+          border-radius: 25px;
+          font-family: SourceSansPro-SemiBold;
+          font-size: 14px;
+          color: black;
+          line-height: 1.2;
+          text-transform: uppercase;
+        }
+      }
+
+      .text-content {
+        padding-bottom: 20px;
+        padding-top: 57px;
+        text-align: center;
+      }
+
+      .flex-omiauth {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.container-login::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
