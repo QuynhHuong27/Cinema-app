@@ -1,3 +1,5 @@
 class HomepagesController < ApplicationController
-  def home; end
+  def home
+    @film_types = FilmType.all
+  end
 end
