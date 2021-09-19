@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+FilmType.create([
+  { type_name: "phim chiếu rạp" },
+  { type_name: "phim đang chiếu" },
+  { type_name: "suất chiếu đặc biệt" }
+])

@@ -1,0 +1,2 @@
+class FilmType  < ApplicationRecord
+end

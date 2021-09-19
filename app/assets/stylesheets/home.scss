@@ -1,0 +1,25 @@
+.list-film {
+  margin-top: 40px;
+
+  .container {
+    max-width: 900px !important;
+  }
+
+  .nav {
+    border-bottom: 0.5px solid #ccc;
+  }
+
+  ul li span.nav-link h5 {
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+  }
+
+  ul li span.active-type {
+    border-bottom: 3px solid #0660e6;
+  }
+
+  ul li span.active-type .active-text {
+    color: #03599d;
+  }
+}
