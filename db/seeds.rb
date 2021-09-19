@@ -7,7 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 FilmType.create([
-  { type_name: "phim chiếu rạp" },
-  { type_name: "phim đang chiếu" },
-  { type_name: "suất chiếu đặc biệt" }
+  { type_name: "Anime" },
+  { type_name: "Hành động " },
+  { type_name: "Võ thuật" },
+  { type_name: "Kinh dị" },
+  { type_name: "Hài hước" },
+  { type_name: "Hoạt Hình" },
+  { type_name: "Tình cảm " },
+  { type_name: "Chiến tranh " },
+  { type_name: "Thần thoại" },
+  { type_name: "Tội phạm" },
+  { type_name: "Lịch sử " },
+  { type_name: "Tội phạm" }
 ])
