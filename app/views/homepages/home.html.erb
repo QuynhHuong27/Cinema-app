@@ -26,9 +26,10 @@
 </div>
 <div>
 <div id="list-category-film" class="list-film">
-  <div class="container">
+  <div class="container status-film">
     <ul class="nav justify-content-center list-item-film">
       <%= render partial: "film_type", collection: @film_types, as: :film_type %>
     </ul>
   </div>
+  <%= render template: "films/index" %>
 <div>

@@ -20,3 +20,15 @@ FilmType.create([
   { type_name: "Lịch sử " },
   { type_name: "Tội phạm" }
 ])
+
+Film.create([
+  {
+    film_name: "Giải Cứu Guy",
+    film_day: "11/12/2021",
+    film_type_id: 5,
+    author: "Shawn Levy",
+    description: "Guy - Nhân viên giao dịch ngân hàng, phát hiện anh ấy thực chất là người chơi nền trong trò chơi điện tử thế giới mở. Guy quyết định trở thành người anh hùng và viết lại câu chuyện của chính mình. Giờ đây, trong một thế giới không còn giới hạn, anh ấy quyết định trở thành người giải cứu thế giới, theo cách của chính mình.",
+    status: 0,
+    time: 100
+  }
+])
