@@ -34,3 +34,46 @@ Film.create([
     language: "Tiếng Anh"
   }
 ])
+
+Film.create([
+  {
+    film_name: "Người Nhân Bản",
+    film_day: "22/09/2021",
+    film_type_id: 2,
+    author: "Lee Yong Zoo",
+    description: "Seobok – Người Nhân Bản là câu chuyện về Ki-hun (Gong Yoo) – một cựu đặc vụ sống tách biệt với thế giới bên ngoài kể từ sau biến cố trong quá khứ, chấp nhận thực hiện nhiệm vụ cuối cùng từ Cơ quan Tình báo. Anh phải chịu trách nhiệm di chuyển Seobok (Park Bo Gum), một đối tượng thử nghiệm được tạo ra bằng cách nhân bản tế bào gốc và biến đổi gen.",
+    status: 1,
+    time: 114,
+    actor: "Gong Yoo, Park Bo Gum, Jo Woo Jin, Jang Young Nam, Park Byung Eun",
+    language: "Tiếng Hàn - Phụ đề Tiếng Việt"
+  }
+])
+
+Film.create([
+  {
+    film_name: "Thám Tử Lừng Danh Conan: Viên Đạn Đỏ",
+    film_day: "25/09/2021",
+    film_type_id: 3,
+    author: "Tomoka Nagaoka",
+    description: "Seobok – Người Nhân Bản là câu chuyện về Ki-hun (Gong Yoo) – một cựu đặc vụ sống tách biệt với thế giới bên ngoài kể từ sau biến cố trong quá khứ, chấp nhận thực hiện nhiệm vụ cuối cùng từ Cơ quan Tình báo. Anh phải chịu trách nhiệm di chuyển Seobok (Park Bo Gum), một đối tượng thử nghiệm được tạo ra bằng cách nhân bản tế bào gốc và biến đổi gen.",
+    status: 2,
+    time: 111,
+    actor: " Minami Hamabe, Megumi Hayashibara, Ogata Kenichi, Rikiya Koyama, Minami Takayama",
+    language: "Tiếng Nhật - Phụ đề Tiếng Việt; Lồng tiếng"
+  }
+])
+
+
+Film.create([
+  {
+    film_name: "Giải cứu công chứa kiến ",
+    film_day: "10/10/2021",
+    film_type_id: 4,
+    author: "Noel Cleary",
+    description: "Quá háo hức chào đón mùa xuân, Maya và Willy đã thức dậy khỏi giấc ngủ đông sớm hơn thời gian dự định. Từ đây, đôi bạn vô tình phải nhận một nhiệm vụ đặc biệt – bảo vệ và đưa quả trứng vàng đến ngôi nhà mới.",
+    status: 2,
+    time: 120,
+    actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
+    language: "Tiếng Anh"
+  }
+])
