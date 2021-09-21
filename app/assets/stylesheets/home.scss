@@ -23,3 +23,37 @@
     color: #03599d;
   }
 }
+
+.wrap-content {
+  margin-top: 40px;
+
+  .pi-img-wrapper {
+    img {
+      max-width: 220px;
+      max-height: 330px;
+      border-radius: 34px;
+    }
+  }
+
+  .film-info {
+    margin-top: 7px;
+    .film-name {
+      font-size: 18px;
+      font-weight: 550;
+      color: #337ab7;
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .list-unstyled {
+      .bold {
+        .color {
+          color: #337ab7;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

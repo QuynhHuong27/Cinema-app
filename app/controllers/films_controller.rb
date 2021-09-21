@@ -4,4 +4,8 @@ class FilmsController < ApplicationController
     @films = Film.where(status: status_film)
     respond_to :js
   end
+
+  def show
+    @film = Film.find params[:id]
+  end
 end

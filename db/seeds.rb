@@ -29,6 +29,8 @@ Film.create([
     author: "Shawn Levy",
     description: "Guy - Nhân viên giao dịch ngân hàng, phát hiện anh ấy thực chất là người chơi nền trong trò chơi điện tử thế giới mở. Guy quyết định trở thành người anh hùng và viết lại câu chuyện của chính mình. Giờ đây, trong một thế giới không còn giới hạn, anh ấy quyết định trở thành người giải cứu thế giới, theo cách của chính mình.",
     status: 0,
-    time: 100
+    time: 100,
+    actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
+    language: "Tiếng Anh"
   }
 ])

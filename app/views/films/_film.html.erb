@@ -1,5 +1,32 @@
 <div class="col-md-3">
   <div class="film-item">
-    <span> <%= film.film_name %> </span>
+    <div class="pi-img-wrapper">
+      <%= image_tag "film.jpeg" %>
+    </div>
+    <div class="film-info film-xs-info">
+      <span class="film-name">
+        <%= link_to film do %>
+          <%= film.film_name %>
+        <% end %>
+      </span>
+      <ul class="list-unstyled">
+        <li>
+          <span class="bold">
+            Thể loại: <%= film.film_type.type_name %>
+          </span>
+        </li>
+        <li>
+          <span class="bold">
+            Thời lượng: <%= film.time %> phút
+          </span>
+        </li>
+        <li>
+          <span class="bold">
+            Ngày khởi chiếu:
+            <span class="color"> <%= film.film_day %> </span>
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
