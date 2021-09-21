@@ -1,0 +1,32 @@
+.film-detail {
+  background-color: #8888880f;
+
+  .film-path {
+    margin: 20px 0 20px 0;
+    h3 {
+      font-size: 20px;
+    }
+
+    .color-highline {
+      color: #337ab7;
+    }
+  }
+
+  .pi-img-wrapper {
+    img {
+      max-width: 250px;
+      border-radius: 20px;
+    }
+  }
+  ul {
+    list-style-type: none;
+  }
+
+  .description {
+    margin: 15px 0 15px 0;
+  }
+
+  .col-md-4 ul li span {
+    font-weight: 500;
+  }
+}

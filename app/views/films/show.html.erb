@@ -1,0 +1,47 @@
+<div class="film-detail">
+  <div class="container">
+    <div class="film-path">
+      <h3>
+        Trang chủ >
+        <span class="color-highline"> <%= @film.film_name %> </span>
+      </h3>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="pi-img-wrapper">
+          <%= image_tag "film.jpeg" %>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="name-film">
+          <h2> <%= @film.film_name %> </h2>
+        </div>
+        <div class="description">
+          <span> <%= @film.description %> </span>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <ul>
+              <li><span>Đạo Diễn:</span></li>
+              <li><span>Diễn Viên:</span></li>
+              <li><span>Thể Loại:</span></li>
+              <li><span>Thời Lượng:</span></li>
+              <li><span>Ngôn Ngữ:</span></li>
+              <li><span>Ngày Khởi Chiếu:</span></li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <ul>
+              <li><span><%= @film.author %></span></li>
+              <li><span><%= @film.actor %></span></li>
+              <li><span><%= @film.film_type.type_name %></span></li>
+              <li><span><%= @film.time %> phút</span></li>
+              <li><span><%= @film.language %></span></li>
+              <li><span><%= @film.film_day %></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
