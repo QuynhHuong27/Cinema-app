@@ -8,12 +8,18 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= yield :javascript_includes %>
   </head>
 
   <body>
-    <%= render "layouts/customer" %>
-    <%= render "layouts/header" %>
-    <%= yield %>
+      <%= render "layouts/header" %>
+      <div class="container">
+        <div class="authentication">
+          <%= render "layouts/authenticate/option" %>
+          <div class="form-authen">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
