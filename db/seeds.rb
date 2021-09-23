@@ -32,11 +32,8 @@ Film.create([
     time: 100,
     actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
     language: "Tiếng Anh"
-  }
-])
-
-Film.create([
-  {
+  },
+{
     film_name: "Người Nhân Bản",
     film_day: "22/09/2021",
     film_type_id: 2,
@@ -46,10 +43,7 @@ Film.create([
     time: 114,
     actor: "Gong Yoo, Park Bo Gum, Jo Woo Jin, Jang Young Nam, Park Byung Eun",
     language: "Tiếng Hàn - Phụ đề Tiếng Việt"
-  }
-])
-
-Film.create([
+  },
   {
     film_name: "Thám Tử Lừng Danh Conan: Viên Đạn Đỏ",
     film_day: "25/09/2021",
@@ -60,11 +54,7 @@ Film.create([
     time: 111,
     actor: " Minami Hamabe, Megumi Hayashibara, Ogata Kenichi, Rikiya Koyama, Minami Takayama",
     language: "Tiếng Nhật - Phụ đề Tiếng Việt; Lồng tiếng"
-  }
-])
-
-
-Film.create([
+  },
   {
     film_name: "Giải cứu công chứa kiến ",
     film_day: "10/10/2021",
@@ -76,4 +66,38 @@ Film.create([
     actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
     language: "Tiếng Anh"
   }
+])
+Cinema.create([
+  { name: "Thái Nguyên"},
+  { name: "Hà Nội " },
+  { name: "Hải Dương"},
+  { name: "Nam Định"},
+  { name: "Hải Phòng"},
+])
+
+Rom.creater([
+  { name: "R01", cinema_id:"1" },
+  { name: "R02", cinema_id:"2" },
+  { name: "R03", cinema_id:"1" },
+  { name: "R04", cinema_id:"2" },
+  { name: "R05", cinema_id:"4" },
+  { name: "R06", cinema_id:"3" },
+  { name: "R07", cinema_id:"5" },
+  { name: "R08", cinema_id:"4" },
+])
+
+
+Seat.creater([
+  { room_id: "1", Seat_Reserved:"01" },
+  { room_id: "1", Seat_Reserved:"02" },
+  { room_id: "1", Seat_Reserved:"03" },
+  { room_id: "1", Seat_Reserved:"03" },
+  { room_id: "2", Seat_Reserved:"04" },
+  { room_id: "2", Seat_Reserved:"05" },
+  { room_id: "2", Seat_Reserved:"07" },
+  { room_id: "3", Seat_Reserved:"09" },
+  { room_id: "3", Seat_Reserved:"05" },
+  { room_id: "4", Seat_Reserved:"06" },
+  { room_id: "4", Seat_Reserved:"03" },
+  { room_id: "4", Seat_Reserved:"03" },
 ])
