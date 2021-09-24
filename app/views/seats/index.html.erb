@@ -1,0 +1,28 @@
+<% content_for :javascript_includes do %>
+  <%= javascript_pack_tag "pickseat.js" %>
+<% end %>
+
+<div class="list-seats">
+  <div class="row">
+    <div class="annotates">
+      <ul class="annotate-item list-inline">
+        <li class="list-inline-item">
+          <span class="btn btn-seat-blank">Ghế trống</span>
+        </li>
+        <li class="list-inline-item">
+          <span class="btn btn-seat-picking">Ghế đang chọn</span>
+        </li>
+        <li class="list-inline-item">
+          <span class="btn btn-ordered">Ghế đã đặt</span>
+        </li>
+      </ul>
+    </div>
+    <% if film.showing? || film.special? %>
+      <% film.room.seat.each do |seat| %>
+        <div class="col-md-2">
+          <%= status_seats seat.status, seat.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
