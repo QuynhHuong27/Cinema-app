@@ -56,7 +56,7 @@ Film.create([
     language: "Tiếng Nhật - Phụ đề Tiếng Việt; Lồng tiếng"
   },
   {
-    film_name: "Giải cứu công chứa kiến ",
+    film_name: "Giải cứu công chúa kiến ",
     film_day: "10/10/2021",
     film_type_id: 4,
     author: "Noel Cleary",
