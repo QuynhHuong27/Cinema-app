@@ -6,33 +6,33 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# FilmType.create([
-#   { type_name: "Anime" },
-#   { type_name: "Hành động " },
-#   { type_name: "Võ thuật" },
-#   { type_name: "Kinh dị" },
-#   { type_name: "Hài hước" },
-#   { type_name: "Hoạt Hình" },
-#   { type_name: "Tình cảm " },
-#   { type_name: "Chiến tranh " },
-#   { type_name: "Thần thoại" },
-#   { type_name: "Tội phạm" },
-#   { type_name: "Lịch sử " },
-#   { type_name: "Tội phạm" }
-# ])
+FilmType.create([
+  { type_name: "Anime" },
+  { type_name: "Hành động " },
+  { type_name: "Võ thuật" },
+  { type_name: "Kinh dị" },
+  { type_name: "Hài hước" },
+  { type_name: "Hoạt Hình" },
+  { type_name: "Tình cảm " },
+  { type_name: "Chiến tranh " },
+  { type_name: "Thần thoại" },
+  { type_name: "Tội phạm" },
+  { type_name: "Lịch sử " },
+  { type_name: "Tội phạm" }
+])
 
 Film.create([
-  # {
-  #   film_name: "Giải Cứu Guy",
-  #   film_day: "11/12/2021",
-  #   film_type_id: 5,
-  #   author: "Shawn Levy",
-  #   description: "Guy - Nhân viên giao dịch ngân hàng, phát hiện anh ấy thực chất là người chơi nền trong trò chơi điện tử thế giới mở. Guy quyết định trở thành người anh hùng và viết lại câu chuyện của chính mình. Giờ đây, trong một thế giới không còn giới hạn, anh ấy quyết định trở thành người giải cứu thế giới, theo cách của chính mình.",
-  #   status: 0,
-  #   time: 100,
-  #   actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
-  #   language: "Tiếng Anh"
-  # },
+  {
+    film_name: "Giải Cứu Guy",
+    film_day: "11/12/2021",
+    film_type_id: 5,
+    author: "Shawn Levy",
+    description: "Guy - Nhân viên giao dịch ngân hàng, phát hiện anh ấy thực chất là người chơi nền trong trò chơi điện tử thế giới mở. Guy quyết định trở thành người anh hùng và viết lại câu chuyện của chính mình. Giờ đây, trong một thế giới không còn giới hạn, anh ấy quyết định trở thành người giải cứu thế giới, theo cách của chính mình.",
+    status: 0,
+    time: 100,
+    actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
+    language: "Tiếng Anh"
+  },
   {
     film_name: "Người Nhân Bản",
     film_day: "22/09/2021",
@@ -68,55 +68,40 @@ Film.create([
   }
 ])
 
-# Cinema.create([
-#   { name: "Thái Nguyên" },
-#   { name: "Hà Nội " },
-#   { name: "Hải Dương" },
-#   { name: "Nam Định" },
-#   { name: "Hải Phòng" },
-# ])
+Cinema.create([
+  { name: "Thái Nguyên" },
+  { name: "Hà Nội " },
+  { name: "Hải Dương" },
+  { name: "Nam Định" },
+  { name: "Hải Phòng" },
+])
 
-# Cinema.all.each do |cinema|
-#   Room.create([
-#     { name: "R01", cinema_id: cinema.id },
-#     { name: "R02", cinema_id: cinema.id },
-#     { name: "R03", cinema_id: cinema.id },
-#     { name: "R04", cinema_id: cinema.id },
-#     { name: "R05", cinema_id: cinema.id },
-#     { name: "R06", cinema_id: cinema.id },
-#     { name: "R07", cinema_id: cinema.id},
-#     { name: "R08", cinema_id: cinema.id },
-#   ])
-# end
+Cinema.all.each do |cinema|
+  Room.create([
+    { name: "R01", cinema_id: cinema.id },
+    { name: "R02", cinema_id: cinema.id },
+    { name: "R03", cinema_id: cinema.id },
+    { name: "R04", cinema_id: cinema.id },
+    { name: "R05", cinema_id: cinema.id },
+    { name: "R06", cinema_id: cinema.id },
+    { name: "R07", cinema_id: cinema.id},
+    { name: "R08", cinema_id: cinema.id },
+  ])
+end
 
-# Room.all.each do |room|
-#   Seat.create([
-#     { room_id: room.id, name:"A", status: 0 },
-#     { room_id: room.id, name:"B", status: 0 },
-#     { room_id: room.id, name:"C", status: 0 },
-#     { room_id: room.id, name:"D", status: 0 },
-#     { room_id: room.id, name:"F", status: 0 },
-#     { room_id: room.id, name:"G", status: 0 },
-#     { room_id: room.id, name:"H", status: 0 },
-#     { room_id: room.id, name:"I", status: 0 },
-#     { room_id: room.id, name:"K", status: 0 },
-#     { room_id: room.id, name:"L", status: 0 },
-#     { room_id: room.id, name:"M", status: 0 },
-#     { room_id: room.id, name:"N", status: 0 }
-#   ])
-# end
-
-# Seat.creater([
-#   { room_id: "1", Seat_Reserved:"01" },
-#   { room_id: "1", Seat_Reserved:"02" },
-#   { room_id: "1", Seat_Reserved:"03" },
-#   { room_id: "1", Seat_Reserved:"03" },
-#   { room_id: "2", Seat_Reserved:"04" },
-#   { room_id: "2", Seat_Reserved:"05" },
-#   { room_id: "2", Seat_Reserved:"07" },
-#   { room_id: "3", Seat_Reserved:"09" },
-#   { room_id: "3", Seat_Reserved:"05" },
-#   { room_id: "4", Seat_Reserved:"06" },
-#   { room_id: "4", Seat_Reserved:"03" },
-#   { room_id: "4", Seat_Reserved:"03" },
-# ])
+Room.all.each do |room|
+  Seat.create([
+    { room_id: room.id, name:"A", status: 0 },
+    { room_id: room.id, name:"B", status: 0 },
+    { room_id: room.id, name:"C", status: 0 },
+    { room_id: room.id, name:"D", status: 0 },
+    { room_id: room.id, name:"F", status: 0 },
+    { room_id: room.id, name:"G", status: 0 },
+    { room_id: room.id, name:"H", status: 0 },
+    { room_id: room.id, name:"I", status: 0 },
+    { room_id: room.id, name:"K", status: 0 },
+    { room_id: room.id, name:"L", status: 0 },
+    { room_id: room.id, name:"M", status: 0 },
+    { room_id: room.id, name:"N", status: 0 }
+  ])
+end
