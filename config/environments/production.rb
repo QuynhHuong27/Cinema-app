@@ -96,6 +96,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  RAILS_ENV=production bundle exec rake assets:precompile RAILS_RELATIVE_URL_ROOT=/cinema-app-beta
+  config.action_controller.relative_url_root  = "/cinema-app-beta"
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
