@@ -1,0 +1,42 @@
+.list-seats {
+  .btn-seat {
+    padding: 4px;
+    width: 40px;
+  }
+
+  .col-md-2 {
+    margin-top: 10px;
+  }
+
+  .btn-seat-blank {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+
+  .btn-ordered {
+    color: #000;
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+}
+
+.order-information {
+  margin-top: 20px;
+  ul li {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.btn-seat-picking {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.pick-seat {
+  .seat-picked {
+    margin: 0 3px 5px 0;
+  }
+}
