@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-FilmType.create([
+FilmType.create!([
   { type_name: "Anime" },
   { type_name: "Hành động " },
   { type_name: "Võ thuật" },
@@ -21,54 +21,7 @@ FilmType.create([
   { type_name: "Tội phạm" }
 ])
 
-Film.create([
-  {
-    film_name: "Giải Cứu Guy",
-    film_day: "11/12/2021",
-    film_type_id: 5,
-    author: "Shawn Levy",
-    description: "Guy - Nhân viên giao dịch ngân hàng, phát hiện anh ấy thực chất là người chơi nền trong trò chơi điện tử thế giới mở. Guy quyết định trở thành người anh hùng và viết lại câu chuyện của chính mình. Giờ đây, trong một thế giới không còn giới hạn, anh ấy quyết định trở thành người giải cứu thế giới, theo cách của chính mình.",
-    status: 0,
-    time: 100,
-    actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
-    language: "Tiếng Anh"
-  },
-  {
-    film_name: "Người Nhân Bản",
-    film_day: "22/09/2021",
-    film_type_id: 2,
-    author: "Lee Yong Zoo",
-    description: "Seobok – Người Nhân Bản là câu chuyện về Ki-hun (Gong Yoo) – một cựu đặc vụ sống tách biệt với thế giới bên ngoài kể từ sau biến cố trong quá khứ, chấp nhận thực hiện nhiệm vụ cuối cùng từ Cơ quan Tình báo. Anh phải chịu trách nhiệm di chuyển Seobok (Park Bo Gum), một đối tượng thử nghiệm được tạo ra bằng cách nhân bản tế bào gốc và biến đổi gen.",
-    status: 1,
-    time: 114,
-    actor: "Gong Yoo, Park Bo Gum, Jo Woo Jin, Jang Young Nam, Park Byung Eun",
-    language: "Tiếng Hàn - Phụ đề Tiếng Việt"
-  },
-  {
-    film_name: "Thám Tử Lừng Danh Conan: Viên Đạn Đỏ",
-    film_day: "25/09/2021",
-    film_type_id: 3,
-    author: "Tomoka Nagaoka",
-    description: "Seobok – Người Nhân Bản là câu chuyện về Ki-hun (Gong Yoo) – một cựu đặc vụ sống tách biệt với thế giới bên ngoài kể từ sau biến cố trong quá khứ, chấp nhận thực hiện nhiệm vụ cuối cùng từ Cơ quan Tình báo. Anh phải chịu trách nhiệm di chuyển Seobok (Park Bo Gum), một đối tượng thử nghiệm được tạo ra bằng cách nhân bản tế bào gốc và biến đổi gen.",
-    status: 2,
-    time: 111,
-    actor: " Minami Hamabe, Megumi Hayashibara, Ogata Kenichi, Rikiya Koyama, Minami Takayama",
-    language: "Tiếng Nhật - Phụ đề Tiếng Việt; Lồng tiếng"
-  },
-  {
-    film_name: "Giải cứu công chúa kiến ",
-    film_day: "10/10/2021",
-    film_type_id: 4,
-    author: "Noel Cleary",
-    description: "Quá háo hức chào đón mùa xuân, Maya và Willy đã thức dậy khỏi giấc ngủ đông sớm hơn thời gian dự định. Từ đây, đôi bạn vô tình phải nhận một nhiệm vụ đặc biệt – bảo vệ và đưa quả trứng vàng đến ngôi nhà mới.",
-    status: 2,
-    time: 120,
-    actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
-    language: "Tiếng Anh"
-  }
-])
-
-Cinema.create([
+Cinema.create!([
   { name: "Thái Nguyên" },
   { name: "Hà Nội " },
   { name: "Hải Dương" },
@@ -77,7 +30,7 @@ Cinema.create([
 ])
 
 Cinema.all.each do |cinema|
-  Room.create([
+  Room.create!([
     { name: "R01", cinema_id: cinema.id },
     { name: "R02", cinema_id: cinema.id },
     { name: "R03", cinema_id: cinema.id },
@@ -90,7 +43,7 @@ Cinema.all.each do |cinema|
 end
 
 Room.all.each do |room|
-  Seat.create([
+  Seat.create!([
     { room_id: room.id, name:"A", status: 0 },
     { room_id: room.id, name:"B", status: 0 },
     { room_id: room.id, name:"C", status: 0 },
@@ -105,3 +58,68 @@ Room.all.each do |room|
     { room_id: room.id, name:"N", status: 0 }
   ])
 end
+
+anime_film = FilmType.first.id
+action_film = FilmType.second.id
+kd_film = FilmType.fourth.id
+fun_film = FilmType.fifth.id
+
+first_room = Room.first.id
+second_room = Room.second.id
+fourth_room = Room.fourth.id
+fifth_room = Room.fifth.id
+
+Film.create!([
+  {
+    film_name: "Giải Cứu Guy",
+    film_day: "11/12/2021",
+    film_type_id: action_film,
+    author: "Shawn Levy",
+    description: "Guy - Nhân viên giao dịch ngân hàng, phát hiện anh ấy thực chất là người chơi nền trong trò chơi điện tử thế giới mở. Guy quyết định trở thành người anh hùng và viết lại câu chuyện của chính mình. Giờ đây, trong một thế giới không còn giới hạn, anh ấy quyết định trở thành người giải cứu thế giới, theo cách của chính mình.",
+    status: 0,
+    time: 100,
+    actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
+    language: "Tiếng Anh",
+    image_url: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/f/r/frguy_teaser2_vietnam.jpg",
+    room_id: first_room
+  },
+  {
+    film_name: "Người Nhân Bản",
+    film_day: "22/09/2021",
+    film_type_id: kd_film,
+    author: "Lee Yong Zoo",
+    description: "Seobok – Người Nhân Bản là câu chuyện về Ki-hun (Gong Yoo) – một cựu đặc vụ sống tách biệt với thế giới bên ngoài kể từ sau biến cố trong quá khứ, chấp nhận thực hiện nhiệm vụ cuối cùng từ Cơ quan Tình báo. Anh phải chịu trách nhiệm di chuyển Seobok (Park Bo Gum), một đối tượng thử nghiệm được tạo ra bằng cách nhân bản tế bào gốc và biến đổi gen.",
+    status: 1,
+    time: 114,
+    actor: "Gong Yoo, Park Bo Gum, Jo Woo Jin, Jang Young Nam, Park Byung Eun",
+    language: "Tiếng Hàn - Phụ đề Tiếng Việt",
+    image_url: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/m/a/main_poster_seobok_15.jpg",
+    room_id: second_room
+  },
+  {
+    film_name: "Thám Tử Lừng Danh Conan: Viên Đạn Đỏ",
+    film_day: "25/09/2021",
+    film_type_id: anime_film,
+    author: "Tomoka Nagaoka",
+    description: "Seobok – Người Nhân Bản là câu chuyện về Ki-hun (Gong Yoo) – một cựu đặc vụ sống tách biệt với thế giới bên ngoài kể từ sau biến cố trong quá khứ, chấp nhận thực hiện nhiệm vụ cuối cùng từ Cơ quan Tình báo. Anh phải chịu trách nhiệm di chuyển Seobok (Park Bo Gum), một đối tượng thử nghiệm được tạo ra bằng cách nhân bản tế bào gốc và biến đổi gen.",
+    status: 2,
+    time: 111,
+    actor: " Minami Hamabe, Megumi Hayashibara, Ogata Kenichi, Rikiya Koyama, Minami Takayama",
+    language: "Tiếng Nhật - Phụ đề Tiếng Việt; Lồng tiếng",
+    image_url: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/c/o/conan_24_-_main_poster_1_.jpg",
+    room_id: fourth_room
+  },
+  {
+    film_name: "Giải Cứu Công Chúa Kiến",
+    film_day: "10/10/2021",
+    film_type_id: fun_film,
+    author: "Noel Cleary",
+    description: "Quá háo hức chào đón mùa xuân, Maya và Willy đã thức dậy khỏi giấc ngủ đông sớm hơn thời gian dự định. Từ đây, đôi bạn vô tình phải nhận một nhiệm vụ đặc biệt – bảo vệ và đưa quả trứng vàng đến ngôi nhà mới.",
+    status: 2,
+    time: 120,
+    actor: "Ryan Reynolds, Jacksepticeye, Jodie Comer, Joe Keery",
+    language: "Tiếng Anh",
+    image_url: "https://www.cgv.vn/media/catalog/product/cache/1/image/1800x/71252117777b696995f01934522c402d/m/a/main_poster_mtb_1_.jpg",
+    room_id: fifth_room
+  }
+])
