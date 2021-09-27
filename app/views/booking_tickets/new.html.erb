@@ -1,0 +1,38 @@
+<div class="container" style="margin-top: 10px">
+  <div class="titile">
+    <h3>
+      <i class="far fa-user"></i> THÔNG TIN THANH TOÁN
+    </h3>
+  </div>
+  <div class="wraper-content">
+    <div class="infor-user">
+      <div class="row">
+        <div class="col-md-4">
+          <h6>Họ tên:</h6>
+          <span><%= current_customer.name %></span>
+        </div>
+        <div class="col-md-4">
+          <h6>Số điện thoại:</h6>
+          <span><%= current_customer.phone_number %></span>
+        </div>
+        <div class="col-md-4">
+          <h6>Email:</h6>
+          <span><%= current_customer.email %></span>
+        </div>
+      </div>
+    </div>
+    <div class="infor-ticket">
+      <div class="title-seate">
+        <span class="title" >GHẾ VIP</span>
+      </div>
+      <div class="total-pice">
+        <% @list_seats.each do |seat| %>
+          <span class="btn-primary" style="margin-left: 3px">
+            <%= seat.name %>
+          </span>
+        <% end %>
+        = <%= @total_price %>VND
+      </div>
+    </div>
+  </div>
+</div>

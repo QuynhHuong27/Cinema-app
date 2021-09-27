@@ -44,18 +44,30 @@ end
 
 Room.all.each do |room|
   Seat.create!([
-    { room_id: room.id, name:"A", status: 0 },
-    { room_id: room.id, name:"B", status: 0 },
-    { room_id: room.id, name:"C", status: 0 },
-    { room_id: room.id, name:"D", status: 0 },
-    { room_id: room.id, name:"F", status: 0 },
-    { room_id: room.id, name:"G", status: 0 },
-    { room_id: room.id, name:"H", status: 0 },
-    { room_id: room.id, name:"I", status: 0 },
-    { room_id: room.id, name:"K", status: 0 },
-    { room_id: room.id, name:"L", status: 0 },
-    { room_id: room.id, name:"M", status: 0 },
-    { room_id: room.id, name:"N", status: 0 }
+    { room_id: room.id, name:"A", status: 0, price: 60000 },
+    { room_id: room.id, name:"B", status: 0, price: 60000 },
+    { room_id: room.id, name:"C", status: 0, price: 60000 },
+    { room_id: room.id, name:"D", status: 0, price: 60000 },
+    { room_id: room.id, name:"F", status: 0, price: 60000 },
+    { room_id: room.id, name:"G", status: 0, price: 60000 },
+    { room_id: room.id, name:"H", status: 0, price: 60000 },
+    { room_id: room.id, name:"I", status: 0, price: 60000 },
+    { room_id: room.id, name:"K", status: 0, price: 60000 },
+    { room_id: room.id, name:"L", status: 0, price: 60000 },
+    { room_id: room.id, name:"M", status: 0, price: 60000 },
+    { room_id: room.id, name:"N", status: 0, price: 60000 },
+    { room_id: room.id, name:"O", status: 0, price: 60000 },
+    { room_id: room.id, name:"P", status: 0, price: 60000 },
+    { room_id: room.id, name:"Q", status: 0, price: 60000 },
+    { room_id: room.id, name:"R", status: 0, price: 60000 },
+    { room_id: room.id, name:"S", status: 0, price: 60000 },
+    { room_id: room.id, name:"T", status: 0, price: 60000 },
+    { room_id: room.id, name:"U", status: 0, price: 60000 },
+    { room_id: room.id, name:"V", status: 0, price: 60000 },
+    { room_id: room.id, name:"X", status: 0, price: 60000 },
+    { room_id: room.id, name:"Y", status: 0, price: 60000 },
+    { room_id: room.id, name:"W", status: 0, price: 60000 },
+    { room_id: room.id, name:"Z", status: 0, price: 60000 }
   ])
 end
 

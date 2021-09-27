@@ -17,7 +17,7 @@ $( document ).ready(function() {
         handleRemoveSeatPicked(this);
       }
     })
-  }
+  };
 
   function handlePickSeat(seatName) {
     let span = document.createElement("span");
@@ -25,11 +25,30 @@ $( document ).ready(function() {
     span.className = "btn seat-picked btn-seat-picking";
     span.setAttribute("data-id", seatName);
     seatPicked.append(span);
-  }
+  };
 
   function handleRemoveSeatPicked(seat) {
     let param_id = seat.dataset.name;
     let data_tag = document.querySelector(`[data-id="${param_id}"]`);
     data_tag.remove();
-  }
+  };
+
+  const currentPage = window.location.origin;
+  const roomName = $(".room-showing").text();
+  const idFilm = document.querySelector(".name-film").dataset.film;
+
+  $(".btn-save-seat").click(function(){
+    $.ajax({
+      method: "POST",
+      dataType: "JSON",
+      url: currentPage + "/save_data_store",
+      data: {
+        session: {
+          room_name: roomName,
+          film_id: idFilm,
+          seat_pick: seatPickedColection
+        }
+      }
+    });
+  });
 })
