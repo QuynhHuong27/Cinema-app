@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="col-md-9">
-        <div class="name-film">
+        <div class="name-film" data-film="<%= @film.id %>">
           <h2> <%= @film.film_name %> </h2>
         </div>
         <div class="description">
@@ -43,28 +43,35 @@
         </div>
         <% if customer_signed_in? && (@film.showing? || @film.special?) %>
           <div id="booking-seat">
-            <div class="col-md-8">
-              <%= render template: "seats/index", locals: { film: @film } %>
-            </div>
-            <div class="col-md-6">
-              <div class="order-information">
-                <div class="row">
-                  <div class="col-md-6">
-                    <ul>
-                      <li>Ngày chiếu:</li>
-                      <li>Giờ chiếu:</li>
-                      <li>Phòng chiếu:</li>
-                      <li>Ghế ngồi:</li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="pick-seat">
+            <div class="row">
+              <div class="col-md-8">
+                <%= render template: "seats/index", locals: { film: @film } %>
+              </div>
+              <div class="col-md-4">
+                <div class="order-information">
+                  <div class="row">
+                    <div class="col-md-6">
                       <ul>
-                        <li>Default</li>
-                        <li>Default</li>
-                        <li>Default</li>
-                        <li class="picked-seat"></li>
+                        <li>Ngày chiếu:</li>
+                        <li>Giờ chiếu:</li>
+                        <li>Phòng chiếu:</li>
+                        <li>Ghế ngồi:</li>
                       </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="pick-seat">
+                        <ul>
+                          <li>Default</li>
+                          <li>Default</li>
+                          <li class="room-showing"><%= @film.room.name %></li>
+                          <li class="picked-seat"></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="submit-seat">
+                      <%= link_to new_booking_ticket_path, class: "btn btn-save-seat" do %>
+                        Tiếp tục đặt
+                      <% end %>
                     </div>
                   </div>
                 </div>
