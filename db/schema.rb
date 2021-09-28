@@ -31,10 +31,6 @@ ActiveRecord::Schema.define(version: 2021_09_28_144931) do
     t.integer "total"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "film_id"
-    t.integer "seat_id"
-    t.integer "room_id"
-    t.integer "showing_time_id"
   end
 
   create_table "cinemas", force: :cascade do |t|
@@ -137,7 +133,7 @@ ActiveRecord::Schema.define(version: 2021_09_28_144931) do
     t.integer "price"
   end
 
-  create_table "showing_times", force: :cascade do |t|
+  create_table "shows", force: :cascade do |t|
     t.datetime "date"
     t.datetime "start_time"
     t.datetime "end_time"
