@@ -20,7 +20,7 @@
     <% if film.showing? || film.special? %>
       <% film.room.seat.each do |seat| %>
         <div class="col-md-2">
-          <%= status_seats seat.status, seat.name %>
+          <%= status_seats seat.status, seat.name, seat.id %>
         </div>
       <% end %>
     <% end %>

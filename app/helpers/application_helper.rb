@@ -16,14 +16,14 @@ module ApplicationHelper
     return @set_name
   end
 
-  def status_seats status, name
+  def status_seats status, name, id
     label = case status.to_sym
             when :blank
               "secondary"
             when :booked
               "warning"
             end
-    tag.span class: "btn btn-seat btn-#{label}", data: {name: name} do
+    tag.span class: "btn btn-seat btn-#{label}", data: {id: id, name: name} do
       name
     end
   end
