@@ -1,3 +1,7 @@
+<% content_for :javascript_includes do %>
+  <%= javascript_pack_tag "finish_booking.js" %>
+<% end %>
+
 <div class="container" style="margin-top: 10px">
   <div class="titile">
     <h3>
@@ -22,16 +26,26 @@
       </div>
     </div>
     <div class="infor-ticket">
-      <div class="title-seate">
-        <span class="title" >GHẾ VIP</span>
+      <div class="room-infor">
+        <h5 class="room-detail" data-room="<%= @room.id %>"> Phòng: <%= @room.name %> </h5>
+        <h5> Phim: <%= @film_name %></h5>
       </div>
-      <div class="total-pice">
+      <div class="title-seate">
+        <span class="title">GHẾ VIP</span>
+      </div>
+      <div class="total-pice" data-seats="<%= @list_seats.pluck(:id) %>">
         <% @list_seats.each do |seat| %>
-          <span class="btn-primary" style="margin-left: 3px">
+          <span class="btn btn-result btn-primary" style="margin-left: 3px">
             <%= seat.name %>
           </span>
         <% end %>
-        = <%= @total_price %>VND
+        = <span class="pay-price" data-price="<%= @total_price %>"> <%= @total_price %> <span> VND
+      </div>
+      <div class="finish-booking">
+        <%= link_to "Kết thúc thanh toán", "/",
+          class: "btn btn-finish-booking btn-secondary",
+          style: "margin-top: 20px"
+        %>
       </div>
     </div>
   </div>

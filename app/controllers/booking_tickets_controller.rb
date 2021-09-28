@@ -1,15 +1,19 @@
 class BookingTicketsController < ApplicationController
-  def new
-    @room_name = session[:room_name]
-    @list_seats = session[:seat_picked].map{ |i| Seat.find_by name: i}
-    @total_price = 60000 * @list_seats.size
+  def create
+    @booking_ticket = BookingTicket.new booking_ticket_params
+    list_seats = params[:booking_ticket][:seat_id]
+    if @booking_ticket.save
+      list_seats.each do |seat|
+        BookingSeat.create(seat_id: seat.to_i, booking_ticket_id: @booking_ticket.id)
+        state_seat = Seat.find(seat.to_i).booked!
+      end
+      session[:seats] = []
+    end
   end
 
-  def save_data_store
-    session[:room_name] = params[:session][:room_name]
-    session[:film_id] = params[:session][:film_id]
-    session[:seat_picked] = params[:session][:seat_pick]
-  end
+  private
 
-  def create; end
+  def booking_ticket_params
+    params.require(:booking_ticket).permit(:room_id, :total)
+  end
 end

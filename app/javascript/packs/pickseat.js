@@ -11,10 +11,12 @@ $( document ).ready(function() {
         this.className = listSeat[i].className.replace("btn-secondary", "btn-primary");
         seatPickedColection.push(seatsPicked);
         handlePickSeat(this.dataset.name);
+        handle_save_seat_to_store(this.dataset.id, "/save_seat_to_store");
       } else {
         this.className = listSeat[i].className.replace("btn-primary", "btn-secondary");
         seatPickedColection.filter(item => item !== this.dataset.name);
         handleRemoveSeatPicked(this);
+        handle_save_seat_to_store(this.dataset.id, "/remove_seat_to_store");
       }
     })
   };
@@ -37,18 +39,16 @@ $( document ).ready(function() {
   const roomName = $(".room-showing").text();
   const idFilm = document.querySelector(".name-film").dataset.film;
 
-  $(".btn-save-seat").click(function(){
+  function handle_save_seat_to_store(seat, url) {
     $.ajax({
       method: "POST",
       dataType: "JSON",
-      url: currentPage + "/save_data_store",
+      url: currentPage + url,
       data: {
-        session: {
-          room_name: roomName,
-          film_id: idFilm,
-          seat_pick: seatPickedColection
+        store: {
+          seat: seat,
         }
       }
     });
-  });
+  }
 })
