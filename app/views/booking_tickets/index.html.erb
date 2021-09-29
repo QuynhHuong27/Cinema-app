@@ -1,0 +1,27 @@
+<div class="container">
+  <h4>
+    CÁC LƯỢT VÉ BẠN ĐÃ ĐẶT
+  </h4>
+  <div class="list-tikets-booked">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Phim</th>
+          <th scope="col">Phòng chiếu</th>
+          <th scope="col">Tổng tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @booking_tickers.each_with_index do |ticket, index| %>
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><%= ticket.room.films.first.film_name %></td>
+            <td><%= ticket.room.name %></td>
+            <td><%= ticket.total %>VND</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
