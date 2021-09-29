@@ -1,0 +1,34 @@
+.footer {
+  .list-unstyled {
+    li  {
+      display: flex;
+      justify-content: flex-start;
+      list-style: none;
+     }
+  }
+}
+
+.footer{
+
+  .list-unstyled{
+    .footer-link{
+      text-decoration: none ;
+      position: relative ;
+      text-align: left;
+      color:black;
+      display: inline-block;
+    }
+  }
+}
+.foote {
+  .list-unstyled{
+    li {
+      display: flex;
+      justify-content: flex-start;
+    }
+    a {
+      text-decoration: none ;
+      color:black;
+    }
+  }
+}
